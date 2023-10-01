@@ -8,7 +8,7 @@ const SideList = () => {
   return (
     <div className="flex flex-col items-center justify-between w-full h-screen bg-third">
       <Logo />
-      <CgMenuGridO className="text-6xl hover:cursor-pointer" />
+      <CgMenuGridO className="text-5xl hover:cursor-pointer" />
       <PlusButton />
     </div>
   )

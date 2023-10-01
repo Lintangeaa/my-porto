@@ -24,4 +24,21 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: "Kanit", sans-serif;
+}
+
+@keyframes pulse-transparent-bg {
+  0% {
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent */
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque */
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent */
+  }
+}
+
+.animate-pulse-transparent-bg {
+  animation: pulse-transparent-bg 2s infinite; /* Adjust the duration as needed */
 }
