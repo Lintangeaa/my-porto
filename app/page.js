@@ -6,7 +6,7 @@ import HomeCardList from './components/organism/HomeCardList';
 export default function Home() {
   return (
     <Layout>
-      <section className="w-full px-5 lg:w-7/12 mt-36">
+      <section className="w-full px-5 mt-5 lg:w-7/12 lg:mt-36">
         <article>
           <h1 className="text-5xl font-semibold">Hey, I&apos;m</h1>
           <h1 className="mt-5 text-4xl font-semibold">
