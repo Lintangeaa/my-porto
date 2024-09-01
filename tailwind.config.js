@@ -20,6 +20,8 @@ module.exports = {
         fifth: "#1c2629",
         six: "#cdd3d2",
         eight: "#1e2625",
+        dark: "#212529",
+        sec: '#6c757d'
       },
     },
   },
