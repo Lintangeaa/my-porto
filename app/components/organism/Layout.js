@@ -1,11 +1,10 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Aside from '../molekul/Aside';
-import Logo from '../atom/Logo';
-import { CgMenuGridO } from 'react-icons/cg';
-import { AiOutlineClose } from 'react-icons/ai';
+import {FaFacebook, FaGithub, FaInstagram, FaXTwitter} from 'react-icons/fa6'
+import { MdOutlineMail } from "react-icons/md";
 
 import PlusButton from '../atom/PlusButton';
+import Image from 'next/image';
 
 const Layout = ({ children }) => {
   const [showNav, setShowNav] = useState(false);
@@ -14,50 +13,61 @@ const Layout = ({ children }) => {
     setShowNav(!showNav);
   };
 
-  useEffect(() => {
-    // Load Google AdSense once component mounts
-    const script = document.createElement('script');
-    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
-    script.async = true;
-    document.head.appendChild(script);
-  }, []);
-
   return (
-    <main className="flex lg:overflow-y-hidden">
-      <div className="hidden max-h-screen lg:block lg:w-1/12">
-        <div className="flex flex-col items-center justify-between w-full h-screen bg-third">
-          <Logo />
-          <CgMenuGridO
-            className="text-5xl hover:cursor-pointer"
-            onClick={toggleNav}
+    <main className="flex">
+      <div className="sticky top-0 w-2/6 h-screen p-2 overflow-hidden">
+        <div className="border border-green-500 rounded-2xl min-h-[650px] flex flex-col items-center p-10 text-white">
+          <div className="flex justify-between w-full">
+            <h1 className="text-sm lg:text-2xl">Lintang</h1>
+            <div className="mb-4 text-xs text-end">
+              <p>Web Developer</p>
+              <p>& Backend Developer</p>
+            </div>
+          </div>
+          <Image
+            src={'/mypoto.webp'}
+            width={150}
+            height={50}
+            alt="Lintang Dandung Prakoso"
+            className="max-w-[30px] lg:max-w-full rounded-2xl border border-green-400 min-w-full"
           />
-          <PlusButton />
+          <h2 className='mt-10 text-lg'>lintangeaa25@gmail.com</h2>
+          <h2 className='text-lg'>Indonesia</h2>
+          <p className='mt-4 text-xs text-slate-300'>@ 2024 Lintang. All Right Reserverd</p>
+          <div className='flex justify-between w-4/6 mt-6'>
+            <div className='flex items-center justify-center w-12 h-12 border rounded-full border-slate-300'>
+              <FaXTwitter /> 
+            </div>
+            <div className='flex items-center justify-center w-12 h-12 border rounded-full border-slate-300'>
+              <FaInstagram />
+            </div>
+            <div className='flex items-center justify-center w-12 h-12 border rounded-full border-slate-300'>
+              <FaFacebook />
+            </div>
+            <div className='flex items-center justify-center w-12 h-12 border rounded-full border-slate-300'>
+              <FaGithub />
+            </div>
+          </div>
+          <div className='flex justify-center w-full mt-8'>
+            <button className="flex items-center justify-center w-full p-2 px-6 space-x-2 text-black transition-all duration-500 bg-green-400 rounded-3xl hover:bg-black hover:text-green-500" > <MdOutlineMail className="text-lg"/><p> Hire Me</p></button>
+          </div>
         </div>
       </div>
-      <div className="w-full lg:w-11/12 lg:flex bg-gradient-to-l from-fifth to-fourth ">
-        {showNav ? (
-          <Aside>
-            <AiOutlineClose
-              className="absolute p-1 text-5xl rounded-full right-10 bg-fifth hover:cursor-pointer"
-              onClick={toggleNav}
-            />
-          </Aside>
-        ) : (
-          ''
-        )}
-        {/* Google AdSense Ad Unit */}
-        <ins
-          className="adsbygoogle"
-          style={{ display: 'block' }}
-          data-ad-client="ca-pub-9332525259294865" 
-          data-ad-slot="1234567890"       
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-        <script>
-          {`(adsbygoogle = window.adsbygoogle || []).push({});`}
-        </script>
-        
-        {children}
+
+      <div className="flex-1 p-8 overflow-y-auto bg-slate-400">
+        <h1 className="mb-4 text-2xl font-bold">Main Content</h1>
+        <div id="section1" className="h-[1000px] bg-gray-300 mb-4">
+          <h2 className="text-xl font-semibold">Section 1</h2>
+          <p>Lorem ipsum dolor sit amet...</p>
+        </div>
+        <div id="section2" className="h-[1000px] bg-gray-400 mb-4">
+          <h2 className="text-xl font-semibold">Section 2</h2>
+          <p>Lorem ipsum dolor sit amet...</p>
+        </div>
+        <div id="section3" className="h-[1000px] bg-gray-500 mb-4">
+          <h2 className="text-xl font-semibold">Section 3</h2>
+          <p>Lorem ipsum dolor sit amet...</p>
+        </div>
       </div>
     </main>
   );
