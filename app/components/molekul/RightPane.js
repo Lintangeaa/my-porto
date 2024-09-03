@@ -54,9 +54,9 @@ const RightPane = () => {
             </h1>
             <p className="max-w-xl mt-10 text-sec">
               Since beginning my journey as a freelance designer nearly 8 years
-              ago, I've done remote work for agencies, consulted for startups,
+              ago, Ive done remote work for agencies, consulted for startups,
               and collaborated with talented people to create digital products
-              for both business and consumer use. I'm quietly confident,
+              for both business and consumer use. Im quietly confident,
               naturally curious, and perpetually working on improving my
               chopsone design problem at a time.
             </p>
